@@ -1,7 +1,6 @@
 export default async function handler(req, res) {
   try {
-    const response = await fetch("https://api.example.com/testcases", {
-      method: "POST",
+const response = await fetch(`${process.env.BACKEND_URL}/testcases`, {      method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${process.env.API_KEY}`
