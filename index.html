@@ -230,7 +230,15 @@
             background: rgba(51, 65, 85, 0.9);
         }
 
+        .hero-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
         .terminal-box {
+            width: 100%;
             background: #090d16;
             border: 1px solid var(--card-border);
             border-radius: 12px;
@@ -461,6 +469,64 @@
             word-break: break-all;
         }
 
+        .contact-form {
+            margin-top: 24px;
+            padding: 25px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+        }
+
+        .contact-form h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .contact-form label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            color: var(--text-main);
+            background: #090d16;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            font: inherit;
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .contact-form .message-field {
+            margin-top: 14px;
+        }
+
+        .contact-form .btn-contact {
+            border: 0;
+            cursor: pointer;
+            margin-top: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .contact-form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -547,7 +613,8 @@
                 </div>
             </div>
 
-            <div class="terminal-box">
+            <div class="hero-side">
+                <div class="terminal-box">
                 <div class="terminal-header">
                     <div class="terminal-dots">
                         <span class="dot dot-red"></span>
@@ -563,7 +630,8 @@
                     <p class="pass">✔ Playwright_E2E_User_Flows: PASSED</p>
                     <p class="pass">✔ Boundary_Value_Analysis: PASSED</p>
                     <p class="info" style="margin-top: 15px;">⚡ Defect_Ratio: 0.00% (High Precision)</p>
-                    <p style="color: var(--text-muted); font-size: 0.75rem;">> System status: Ready for release</p>
+                    <p style="color: var(--text-muted); font-size: 0.75rem;">&gt; System status: Ready for release</p>
+                </div>
                 </div>
             </div>
         </section>
@@ -701,83 +769,11 @@
             </div>
             <div class="projects-grid">
                 
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">Manual & Jira</span>
-                        <h3>Digital Banking QA Simulation</h3>
-                        <p>Executed end-to-end testing for banking workflows. Designed test suites on Zephyr Scale and logged categorized defects on Jira with clear reproduction steps.</p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-pill">Jira</span>
-                        <span class="tech-pill">Zephyr Scale</span>
-                        <span class="tech-pill">BVA / EP</span>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">HRMS Web App</span>
-                        <h3>XCELTECH HRMS Testing</h3>
-                        <p>Comprehensive UI/UX and functional QA testing for human resources web system prototype. Uncovered crucial access control and form validation bugs.</p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-pill">HRMS</span>
-                        <span class="tech-pill">Defect Tracking</span>
-                        <span class="tech-pill">Test Matrix</span>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">Automation</span>
-                        <h3>Java & Playwright Automation</h3>
-                        <p>Developed an automated regression suite leveraging Java, Playwright, and TestNG using the Page Object Model (POM) pattern for maintainability.</p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-pill">Java</span>
-                        <span class="tech-pill">Playwright</span>
-                        <span class="tech-pill">TestNG</span>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">API Testing</span>
-                        <h3>Postman REST API Test Suite</h3>
-                        <p>Created automated Postman collections verifying endpoints, payload validation, status codes, and JSON response schema rules.</p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-pill">Postman</span>
-                        <span class="tech-pill">REST API</span>
-                        <span class="tech-pill">JSON Schema</span>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">E-Commerce & Health</span>
-                        <h3>Vezeeta & Noon Exploratory Testing</h3>
-                        <p>Conducted exploratory testing and negative scenarios for appointment booking and shopping workflows, focusing on cart & checkout rules.</p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-pill">Exploratory</span>
-                        <span class="tech-pill">UI Validation</span>
-                        <span class="tech-pill">Mobile QA</span>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">Mobile & OTT</span>
-                        <h3>Joyn & Philo Mobile / TV Testing</h3>
-                        <p>Specialized streaming application testing on Mobile and Tizen OS. Used Charles Proxy to trace network traffic and ADB Logcat for error logging.</p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-pill">Charles Proxy</span>
-                        <span class="tech-pill">ADB Logcat</span>
-                        <span class="tech-pill">Tizen OS</span>
-                    </div>
-                </div>
 
             </div>
         </section>
@@ -1143,6 +1139,25 @@
                 </a>
 
             </div>
+
+            <form class="contact-form" id="contact-form">
+                <h3>Send Me a Message</h3>
+                <div class="contact-form-grid">
+                    <div>
+                        <label for="contact-name">Your Name</label>
+                        <input type="text" id="contact-name" name="name" autocomplete="name" required>
+                    </div>
+                    <div>
+                        <label for="contact-email">Your Email Address</label>
+                        <input type="email" id="contact-email" name="email" autocomplete="email" required>
+                    </div>
+                </div>
+                <div class="message-field">
+                    <label for="contact-message">Your Message</label>
+                    <textarea id="contact-message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn-contact">Send Message</button>
+            </form>
         </section>
     </main>
 
@@ -1151,6 +1166,18 @@
     </footer>
 
     <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const message = document.getElementById('contact-message').value.trim();
+            const subject = encodeURIComponent(`Message from ${name} via your website`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+            window.location.href = `mailto:m99mohamed11@gmail.com?subject=${subject}&body=${body}`;
+        });
+
         const canvas = document.getElementById('bg-canvas');
         if (canvas) {
             const ctx = canvas.getContext('2d');
